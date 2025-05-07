@@ -1,8 +1,7 @@
-package main
+package library
 
 import (
 	"testing"
-	"go-autograder-example/library"
 )
 
 func TestIntToStringSuccess(t *testing.T) {

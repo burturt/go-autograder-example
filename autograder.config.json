@@ -9,8 +9,16 @@
             "timeout": "600s"
         },
         {
+            "name": "TestAddTwoInts", 
+            "number": "p1.1",
+            "points": 5,
+            "visibility": "visible",
+            "timeout": "600s",
+            "count": 5
+        },
+        {
             "name": "TestAddTwoIntsUnreliable",
-            "number": "f1.1",
+            "number": "f1.2",
             "points": 5,
             "visibility": "visible",
             "timeout": "1m",
@@ -18,7 +26,7 @@
         },
         {
             "name": "TestTimeout",
-            "number": "f1.2",
+            "number": "f1.3",
             "points": 5,
             "visibility": "visible",
             "timeout": "2s"

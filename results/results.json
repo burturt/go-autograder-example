@@ -1,0 +1,45 @@
+{
+ "visibility": "visible",
+ "tests": [
+  {
+   "score": 5,
+   "max_score": 5,
+   "name": "TestAddTwoInts",
+   "number": "p1.0",
+   "output": "=== RUN   TestAddTwoInts\n=== RUN   TestAddTwoInts/both_positive\n=== RUN   TestAddTwoInts/one_positive,_one_negative\n=== RUN   TestAddTwoInts/both_negative\n=== RUN   TestAddTwoInts/zero_and_positive\n=== RUN   TestAddTwoInts/zero_and_negative\n--- PASS: TestAddTwoInts (0.00s)\n    --- PASS: TestAddTwoInts/both_positive (0.00s)\n    --- PASS: TestAddTwoInts/one_positive,_one_negative (0.00s)\n    --- PASS: TestAddTwoInts/both_negative (0.00s)\n    --- PASS: TestAddTwoInts/zero_and_positive (0.00s)\n    --- PASS: TestAddTwoInts/zero_and_negative (0.00s)\nPASS\nok  \tgo-autograder-example\t0.030s\ntesting: warning: no tests to run\nPASS\nok  \tgo-autograder-example/library\t0.027s [no tests to run]\n",
+   "visibility": "visible"
+  },
+  {
+   "score": 0,
+   "max_score": 5,
+   "name": "TestAddTwoIntsUnreliable",
+   "number": "f1.1",
+   "output": "\n\n--- Iteration 1/5 ---\n=== RUN   TestAddTwoIntsUnreliable\n=== RUN   TestAddTwoIntsUnreliable/both_positive\n=== RUN   TestAddTwoIntsUnreliable/one_positive,_one_negative\n    test_test.go:47: AddTwoIntsUnreliable(5, -3) = 4; want 2\n--- FAIL: TestAddTwoIntsUnreliable (0.00s)\n    --- PASS: TestAddTwoIntsUnreliable/both_positive (0.00s)\n    --- FAIL: TestAddTwoIntsUnreliable/one_positive,_one_negative (0.00s)\nFAIL\nFAIL\tgo-autograder-example\t0.030s\ntesting: warning: no tests to run\nPASS\nok  \tgo-autograder-example/library\t0.027s [no tests to run]\nFAIL\n\n\n--- Iteration 2/5 ---\n=== RUN   TestAddTwoIntsUnreliable\n=== RUN   TestAddTwoIntsUnreliable/both_positive\n=== RUN   TestAddTwoIntsUnreliable/one_positive,_one_negative\n--- PASS: TestAddTwoIntsUnreliable (0.00s)\n    --- PASS: TestAddTwoIntsUnreliable/both_positive (0.00s)\n    --- PASS: TestAddTwoIntsUnreliable/one_positive,_one_negative (0.00s)\nPASS\nok  \tgo-autograder-example\t0.029s\ntesting: warning: no tests to run\nPASS\nok  \tgo-autograder-example/library\t0.027s [no tests to run]\n\n\n--- Iteration 3/5 ---\n=== RUN   TestAddTwoIntsUnreliable\n=== RUN   TestAddTwoIntsUnreliable/both_positive\n    test_test.go:47: AddTwoIntsUnreliable(2, 3) = 7; want 5\n=== RUN   TestAddTwoIntsUnreliable/one_positive,_one_negative\n--- FAIL: TestAddTwoIntsUnreliable (0.00s)\n    --- FAIL: TestAddTwoIntsUnreliable/both_positive (0.00s)\n    --- PASS: TestAddTwoIntsUnreliable/one_positive,_one_negative (0.00s)\nFAIL\nFAIL\tgo-autograder-example\t0.030s\ntesting: warning: no tests to run\nPASS\nok  \tgo-autograder-example/library\t0.029s [no tests to run]\nFAIL\n\n\n--- Iteration 4/5 ---\n=== RUN   TestAddTwoIntsUnreliable\n=== RUN   TestAddTwoIntsUnreliable/both_positive\n=== RUN   TestAddTwoIntsUnreliable/one_positive,_one_negative\n--- PASS: TestAddTwoIntsUnreliable (0.00s)\n    --- PASS: TestAddTwoIntsUnreliable/both_positive (0.00s)\n    --- PASS: TestAddTwoIntsUnreliable/one_positive,_one_negative (0.00s)\nPASS\nok  \tgo-autograder-example\t0.029s\ntesting: warning: no tests to run\nPASS\nok  \tgo-autograder-example/library\t0.026s [no tests to run]\n\n\n--- Iteration 5/5 ---\n=== RUN   TestAddTwoIntsUnreliable\n=== RUN   TestAddTwoIntsUnreliable/both_positive\n=== RUN   TestAddTwoIntsUnreliable/one_positive,_one_negative\n--- PASS: TestAddTwoIntsUnreliable (0.00s)\n    --- PASS: TestAddTwoIntsUnreliable/both_positive (0.00s)\n    --- PASS: TestAddTwoIntsUnreliable/one_positive,_one_negative (0.00s)\nPASS\nok  \tgo-autograder-example\t0.030s\ntesting: warning: no tests to run\nPASS\nok  \tgo-autograder-example/library\t0.027s [no tests to run]\n",
+   "visibility": "visible"
+  },
+  {
+   "score": 0,
+   "max_score": 5,
+   "name": "TestTimeout",
+   "number": "f1.2",
+   "output": "=== RUN   TestTimeout\npanic: test timed out after 2s\n\trunning tests:\n\t\tTestTimeout (2s)\n\ngoroutine 22 [running]:\ntesting.(*M).startAlarm.func1()\n\t/usr/local/go/src/testing/testing.go:2484 +0x394\ncreated by time.goFunc\n\t/usr/local/go/src/time/sleep.go:215 +0x2d\n\ngoroutine 1 [chan receive]:\ntesting.(*T).Run(0xc000082a80, {0x578baf?, 0xc0000e1b30?}, 0x584b20)\n\t/usr/local/go/src/testing/testing.go:1859 +0x431\ntesting.runTests.func1(0xc000082a80)\n\t/usr/local/go/src/testing/testing.go:2279 +0x37\ntesting.tRunner(0xc000082a80, 0xc0000e1c70)\n\t/usr/local/go/src/testing/testing.go:1792 +0xf4\ntesting.runTests(0xc0000d8000, {0x6a6720, 0x3, 0x3}, {0x6ace00?, 0x7?, 0x6abc80?})\n\t/usr/local/go/src/testing/testing.go:2277 +0x4b4\ntesting.(*M).Run(0xc0000a4140)\n\t/usr/local/go/src/testing/testing.go:2142 +0x64a\nmain.main()\n\t_testmain.go:49 +0x9b\n\ngoroutine 21 [sleep]:\ntime.Sleep(0x174876e800)\n\t/usr/local/go/src/runtime/time.go:338 +0x165\ngo-autograder-example.TestTimeout(0xc000082c40?)\n\t/autograder/source/submission/test_test.go:56 +0x1d\ntesting.tRunner(0xc000082c40, 0x584b20)\n\t/usr/local/go/src/testing/testing.go:1792 +0xf4\ncreated by testing.(*T).Run in goroutine 1\n\t/usr/local/go/src/testing/testing.go:1851 +0x413\nFAIL\tgo-autograder-example\t2.042s\ntesting: warning: no tests to run\nPASS\nok  \tgo-autograder-example/library\t0.027s [no tests to run]\nFAIL\n",
+   "visibility": "visible"
+  },
+  {
+   "score": 5,
+   "max_score": 5,
+   "name": "TestIntToStringSuccess",
+   "number": "p2.0",
+   "output": "=== RUN   TestIntToStringSuccess\n--- PASS: TestIntToStringSuccess (0.00s)\nPASS\nok  \tgo-autograder-example/library\t0.029s\n",
+   "visibility": "visible"
+  },
+  {
+   "score": 0,
+   "max_score": 5,
+   "name": "TestIntToStringFailure",
+   "number": "f2.1",
+   "output": "=== RUN   TestIntToStringFailure\n--- FAIL: TestIntToStringFailure (0.00s)\npanic: odd number [recovered]\n\tpanic: odd number\n\ngoroutine 18 [running]:\ntesting.tRunner.func1.2({0x547720, 0x5af850})\n\t/usr/local/go/src/testing/testing.go:1734 +0x21c\ntesting.tRunner.func1()\n\t/usr/local/go/src/testing/testing.go:1737 +0x35e\npanic({0x547720?, 0x5af850?})\n\t/usr/local/go/src/runtime/panic.go:792 +0x132\ngo-autograder-example/library.IntToString(...)\n\t/autograder/source/submission/library/other_stuff.go:9\ngo-autograder-example/library.TestIntToStringFailure(0xc000102700)\n\t/autograder/source/submission/library/lib_test.go:35 +0x1a8\ntesting.tRunner(0xc000102700, 0x584308)\n\t/usr/local/go/src/testing/testing.go:1792 +0xf4\ncreated by testing.(*T).Run in goroutine 1\n\t/usr/local/go/src/testing/testing.go:1851 +0x413\nFAIL\tgo-autograder-example/library\t0.033s\nFAIL\n",
+   "visibility": "visible"
+  }
+ ]
+}
