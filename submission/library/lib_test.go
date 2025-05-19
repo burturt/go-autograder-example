@@ -38,3 +38,9 @@ func TestIntToStringFailure(t *testing.T) {
 		}
 	}
 }
+
+
+func TestSameName(t *testing.T) {
+	// This test should fail
+	t.Errorf("Failed in library")
+}

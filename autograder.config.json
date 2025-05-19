@@ -44,6 +44,20 @@
             "points": 5,
             "folder": "library",
             "visibility": "visible"
+        },
+        {
+            "name": "TestSameName",
+            "number": "f2.2",
+            "points": 5,
+            "folder": "library",
+            "visibility": "visible"
+        },
+        {
+            "name": "TestSameName",
+            "number": "s2.3",
+            "points": 5,
+            "visibility": "visible"
         }
-    ]
+    ],
+    "uploader": "bashupload.com"
 }

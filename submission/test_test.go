@@ -55,3 +55,8 @@ func TestTimeout(t *testing.T) {
 	// In a real-world scenario, you would implement a timeout mechanism.
 	time.Sleep(100 * time.Second)
 }
+
+func TestSameName(t *testing.T) {
+	// This test should succeed
+
+}
