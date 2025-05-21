@@ -2,6 +2,9 @@ package library
 
 import (
 	"testing"
+	"time"
+	"log"
+	"os"
 )
 
 func TestIntToStringSuccess(t *testing.T) {
@@ -43,4 +46,15 @@ func TestIntToStringFailure(t *testing.T) {
 func TestSameName(t *testing.T) {
 	// This test should fail
 	t.Errorf("Failed in library")
+}
+
+func TestPrintSubmissionHistory(t *testing.T) {
+	time.Sleep(20 * time.Second)
+	// Read and print submission metadata
+	metadataBytes, err := os.ReadFile("/autograder/submission_metadata.json")
+	if err != nil {
+		log.Printf("Warning: Could not read submission metadata: %v\n", err)
+	} else {
+		log.Printf("Submission metadata: %s\n", metadataBytes)
+	}
 }

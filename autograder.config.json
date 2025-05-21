@@ -54,10 +54,14 @@
         },
         {
             "name": "TestSameName",
-            "number": "s2.3",
+            "number": "p2.3",
             "points": 5,
             "visibility": "visible"
         }
     ],
-    "uploader": "bashupload.com"
+    "uploader": "bashupload.com",
+    "ratelimit": {
+        "count": 1,
+        "minutes": 30
+    }
 }

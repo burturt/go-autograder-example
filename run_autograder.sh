@@ -19,9 +19,9 @@ done
 if [ "$debug_mode" = true ]; then
     # Debug mode: run interactive shell + don't use build cache
     docker build -t go-autograder --no-cache . -f go-autograder/Dockerfile
-    docker run --platform=linux/amd64 -it --rm -v ./submission:/autograder/submission -v ./results:/autograder/results go-autograder /bin/bash
+    docker run --platform=linux/amd64 -it --rm -v ./submission:/autograder/submission -v ./results:/autograder/results -v ./submission_metadata.json:/autograder/submission_metadata.json go-autograder /bin/bash
 else
     # Normal mode: run the autograder
     docker build -t go-autograder . -f go-autograder/Dockerfile
-    docker run --platform=linux/amd64 --rm -v ./submission:/autograder/submission -v ./results:/autograder/results go-autograder /autograder/run_autograder
+    docker run --platform=linux/amd64 --rm -v ./submission:/autograder/submission -v ./results:/autograder/results -v ./submission_metadata.json:/autograder/submission_metadata.json go-autograder /autograder/run_autograder
 fi
