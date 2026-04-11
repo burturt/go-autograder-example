@@ -8,55 +8,7 @@ Optionally fork this repository into a (probably private) copy, or clone this re
 
 ## Config files
 
-### `autograder.config.json`
-This JSON file is where you will configure your autograder for your particular assignment. In this file, you must specify the names of the tests you want to use for grading, along with associated point values.
-
-```json=
-{
-    "visibility": "visible", // Optional visibility setting for autograder results: visible, hidden, after_due_date, after_published
-    "tests": [
-        {
-            "name": "TestAddTwoNumbers",  // The name of the test (must match the test name as defined in test files)
-            "number": "1.1", // Optional (will just be numbered in order of array if no number given)
-            "points": 5, // The point value of the test case
-            "visibility": "visible", // Optional visibility setting for test case: visible, hidden, after_due_date, after_published
-            "folder": "main", // Optional directory to run go test in, relative to root folder of submission files
-            "timeout": "600s", // Optional test timeout for go test command - fails if it goes beyond this time
-            "count": 4 // Optional: specify number of times to run test case - if it fails once, entire test case fails. Note that timeouts (if set) are per run, not across all runs in a single test case
-        },
-        {
-            "name": "TestAddTwoNegativeNumbers",
-            "number": "1.2",
-            "points": 5,
-            "visibility": "visible"
-        },
-        {
-            "name": "TestAddNums",
-            "number": "2.1",
-            "points": 5,
-            "visibility": "visible"
-        },
-        {
-            "name": "TestAddNumsOne",
-            "number": "2.2",
-            "points": 5,
-            "visibility": "visible"
-        }
-    ]
-}
-```
-
-### replacement_files/
-This folder's contents will be overlayed on top of students' submissions before running tests. For example, if students should have a `main/test_test.go` file, make the file `replacement_files/main/test_test.go`, which will replace (or add) that file in the student's code but keep any other files inside of the `main` folder submitted.
-
-### custom_setup.sh
-This shell script is run (using `source custom_setup.sh`) during autograder build time. Specify the `GO_VERSION` variable value to the version of go to install.
-
-### custom_run_autograder.sh
-This shell script is run after the student's submission is copied into `/autograder/source/submission` and had their files overlayed, but before running the test cases. This can be used to, for example, check integrity of parts of files in the submission, verify file structure, check for extraneous/missing files, or search for known suspicious strings.
-
-### required_files.txt
-Put one path per line to a file that should exist - if any file path does not exist, the autograder will reject the submission and give 0 points.
+See `go-autograder/README.md` for configuration information, as exact options may change depending on the version of the autograder you are using. If this folder is empty, run `git submodule update --init` to populate its contents.
 
 ## Testing
 
