@@ -22,7 +22,8 @@
             "points": 5,
             "visibility": "visible",
             "timeout": "1m",
-            "count": 5
+            "count": 50,
+            "parallelCount": 4
         },
         {
             "name": "TestTimeout",
@@ -57,11 +58,21 @@
             "number": "p2.3",
             "points": 5,
             "visibility": "visible"
+        },
+        {
+            "name": "TestParallelCount",
+            "number": "p3.0",
+            "points": 5,
+            "visibility": "visible",
+            "count": 20,
+            "parallelCount": 3
+        },
+        {
+            "name": "TestNonParallelCount",
+            "number": "p3.2",
+            "points": 5,
+            "visibility": "visible",
+            "count": 5
         }
-    ],
-    "uploader": "bashupload.com",
-    "ratelimit": {
-        "count": 1,
-        "minutes": 30
-    }
+    ]
 }

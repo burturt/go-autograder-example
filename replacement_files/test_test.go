@@ -59,3 +59,15 @@ func TestTimeout(t *testing.T) {
 func TestSameName(t *testing.T) {
 	// This test should succeed
 }
+
+func TestParallelCount(t *testing.T) {
+	t.Logf("Starting parallel test iteration at %v", time.Now())
+	time.Sleep(2 * time.Second)
+	t.Logf("Ending parallel test iteration at %v", time.Now())
+}
+
+func TestNonParallelCount(t *testing.T) {
+	t.Logf("Starting non-parallel test iteration at %v", time.Now())
+	time.Sleep(2 * time.Second)
+	t.Logf("Ending non-parallel test iteration at %v", time.Now())
+}

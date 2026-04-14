@@ -11,8 +11,8 @@ func AddTwoInts(a int, b int) int {
 }
 
 func AddTwoIntsUnreliable(a int, b int) int {
-	// Randomly returns wrong value 25% of the time for testing retesting
-	if rand.Intn(4) == 0 {
+	// Randomly returns wrong value 10% of the time for testing retesting
+	if rand.Intn(10) == 0 {
 		return a + b + 2
 	}
 	return a + b
